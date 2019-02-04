@@ -1,3 +1,23 @@
+module DataFormatsStdDictionaries_xr {
+  module "DataFormats/StdDictionaries/src/classes_vector.h" { header "DataFormats/StdDictionaries/src/classes_vector.h" export * }
+  export *
+}
+
+module DataFormatsStdDictionaries_x1r {
+  module "DataFormats/StdDictionaries/src/classes_map.h" { header "DataFormats/StdDictionaries/src/classes_map.h" export * }
+  export *
+}
+
+module DataFormatsStdDictionaries_x2r {
+  module "DataFormats/StdDictionaries/src/classes_pair.h" { header "DataFormats/StdDictionaries/src/classes_pair.h" export * }
+  export *
+}
+
+module DataFormatsStdDictionaries_x3r {
+  module "DataFormats/StdDictionaries/src/classes_others.h" { header "DataFormats/StdDictionaries/src/classes_others.h" export * }
+  export *
+}
+
 module UtilitiesDCacheAdaptor_xr {
   module "DCacheFile.h" { header "Utilities/DCacheAdaptor/interface/DCacheFile.h" export * }
   export *
@@ -591,7 +611,7 @@ module DataFormatsSiStripDetId_xr [system] {
   export *
 }
 
-module DataFormatsL1GlobalMuonTrigger_xr {
+module DataFormatsL1GlobalMuonTrigger_xr [system] {
   module "L1MuGMTCand.h" { header "DataFormats/L1GlobalMuonTrigger/interface/L1MuGMTCand.h" export * }
   module "L1MuGMTExtendedCand.h" { header "DataFormats/L1GlobalMuonTrigger/interface/L1MuGMTExtendedCand.h" export * }
   module "L1MuGMTReadoutCollection.h" { header "DataFormats/L1GlobalMuonTrigger/interface/L1MuGMTReadoutCollection.h" export * }
@@ -627,7 +647,7 @@ module DataFormatsTrackerCommon_xr {
   export *
 }
 
-module DataFormatsCaloRecHit_xr {
+module DataFormatsCaloRecHit_xr [system] {
   module "CaloCluster.h" { header "DataFormats/CaloRecHit/interface/CaloCluster.h" export * }
   module "CaloClusterFwd.h" { header "DataFormats/CaloRecHit/interface/CaloClusterFwd.h" export * }
   module "CaloID.h" { header "DataFormats/CaloRecHit/interface/CaloID.h" export * }
@@ -865,13 +885,12 @@ module DataFormatsEcalDigi_xr [system] {
 }
 
 module DataFormatsTrackingRecHit_xr {
-  module "AlignmentPositionError.h" { header "DataFormats/TrackingRecHit/interface/AlignmentPositionError.h" export * }
-  module "InvalidTrackingRecHit.h" { header "DataFormats/TrackingRecHit/interface/InvalidTrackingRecHit.h" export * }
+//  module "InvalidTrackingRecHit.h" { header "DataFormats/TrackingRecHit/interface/InvalidTrackingRecHit.h" export * }
   module "KfComponentsHolder.h" { header "DataFormats/TrackingRecHit/interface/KfComponentsHolder.h" export * }
   module "RecHit1D.h" { header "DataFormats/TrackingRecHit/interface/RecHit1D.h" export * }
   module "RecHit2DLocalPos.h" { header "DataFormats/TrackingRecHit/interface/RecHit2DLocalPos.h" export * }
   module "RecSegment.h" { header "DataFormats/TrackingRecHit/interface/RecSegment.h" export * }
-  module "TrackingRecHit.h" { header "DataFormats/TrackingRecHit/interface/TrackingRecHit.h" export * }
+  module "TrackingRecHit.h" { textual header "DataFormats/TrackingRecHit/interface/TrackingRecHit.h" export * }
   module "TrackingRecHitFwd.h" { header "DataFormats/TrackingRecHit/interface/TrackingRecHitFwd.h" export * }
   module "TrackingRecHitGlobalState.h" { header "DataFormats/TrackingRecHit/interface/TrackingRecHitGlobalState.h" export * }
   module "mayown_ptr.h" { header "DataFormats/TrackingRecHit/interface/mayown_ptr.h" export * }
@@ -1466,7 +1485,7 @@ module DataFormatsL1CSCTrackFinder_xr {
   export *
 }
 
-module DataFormatsPhase2TrackerDigi_xr {
+module DataFormatsPhase2TrackerDigi_xr [system] {
   module "Phase2TrackerCommissioningDigi.h" { header "DataFormats/Phase2TrackerDigi/interface/Phase2TrackerCommissioningDigi.h" export * }
   module "Phase2TrackerDigi.h" { header "DataFormats/Phase2TrackerDigi/interface/Phase2TrackerDigi.h" export * }
   export *
@@ -1602,7 +1621,7 @@ module DataFormatsBTauReco_xr {
   export *
 }
 
-module DataFormatsL1CaloTrigger_xr {
+module DataFormatsL1CaloTrigger_xr [system] {
   module "L1CaloCollections.h" { header "DataFormats/L1CaloTrigger/interface/L1CaloCollections.h" export * }
   module "L1CaloEmCand.h" { header "DataFormats/L1CaloTrigger/interface/L1CaloEmCand.h" export * }
   module "L1CaloMipQuietRegion.h" { header "DataFormats/L1CaloTrigger/interface/L1CaloMipQuietRegion.h" export * }
@@ -1916,7 +1935,7 @@ module DataFormatsJetReco_xr {
   export *
 }
 
-module DataFormatsSiPixelDetId_xr {
+module DataFormatsSiPixelDetId_xr [system] {
   module "PXBDetId.h" { header "DataFormats/SiPixelDetId/interface/PXBDetId.h" export * }
   module "PXFDetId.h" { header "DataFormats/SiPixelDetId/interface/PXFDetId.h" export * }
   module "PixelBarrelName.h" { header "DataFormats/SiPixelDetId/interface/PixelBarrelName.h" export * }
@@ -2019,7 +2038,7 @@ module DataFormatsPhase2TrackerCluster_xr {
   export *
 }
 
-module DataFormatsMuonDetId_xr {
+module DataFormatsMuonDetId_xr [system] {
   module "CSCDetId.h" { header "DataFormats/MuonDetId/interface/CSCDetId.h" export * }
   module "CSCIndexer.h" { header "DataFormats/MuonDetId/interface/CSCIndexer.h" export * }
   module "CSCTriggerNumbering.h" { header "DataFormats/MuonDetId/interface/CSCTriggerNumbering.h" export * }
@@ -7874,7 +7893,7 @@ module GeometryCaloGeometry_xr {
   export *
 }
 
-module GeometryCommonDetUnit_xr {
+module GeometryCommonDetUnit_xr [system] {
   module "DetPositioner.h" { header "Geometry/CommonDetUnit/interface/DetPositioner.h" export * }
   module "DetSorting.h" { header "Geometry/CommonDetUnit/interface/DetSorting.h" export * }
   module "GeomDet.h" { header "Geometry/CommonDetUnit/interface/GeomDet.h" export * }
@@ -8850,7 +8869,7 @@ module CondFormatsDTObjects_xr {
   export *
 }
 
-module CondFormatsL1TObjects_xr {
+module CondFormatsL1TObjects_xr [system] {
   module "CaloConfig.h" { header "CondFormats/L1TObjects/interface/CaloConfig.h" export * }
   module "CaloParams.h" { header "CondFormats/L1TObjects/interface/CaloParams.h" export * }
   module "DTTFBitArray.h" { header "CondFormats/L1TObjects/interface/DTTFBitArray.h" export * }
